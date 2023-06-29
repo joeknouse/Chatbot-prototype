@@ -1,0 +1,112 @@
+body {
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #212529;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 2.5rem 0 1.5rem 0;
+    color: #212529;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 2.5rem 0 1.5rem 0;
+    color: #212529;
+    text-align: center;
+}
+
+#chatbot__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: white;
+    width: 80%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem;
+    border: 1px solid darkslategray;
+    border-radius: .25rem;
+}
+
+.chat-column {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    vertical-align: top;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+#chatbot__input {
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chatbot__input input {
+    height: 50px;
+    width: 86%;
+    border: 1px solid darkslategray;
+    border-radius: .25rem;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #212529;
+    margin-bottom: .5rem;
+}
+
+button {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: .375rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    cursor: pointer;
+    margin: .5rem 1.5rem;
+}
+
+.chat-button {
+    width: 86%;
+}
+
+#chatbot__output-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: darkslategray;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 1rem 2rem;
+    border: 1px solid darkslategray;
+    border-radius: .25rem;
+}
+
+.output-text {
+    color: white;
+}

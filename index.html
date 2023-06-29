@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>ChatBot Prototype V-1</title>
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="styles/style.css" />
+	</head>
+	<body>
+		<!--[if lt IE 7]>
+			<p class="browsehappy">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="#">upgrade your browser</a> to improve your experience.
+			</p>
+		<![endif]-->
+
+		<script src="scripts/main.js" defer></script>
+
+		<section id="header">
+			<h1 id="main__title">ChatBot Prototype V-1</h1>
+		</section>
+
+		<section id="chatbot">
+			<div id="chatbot__container">
+				<div id="chatbot__messages" class="chat-column">
+					<div class="chatbot__message">
+						<h3 id="chatbot__message-subhead">
+							Hello, I'm a chatbot. How can I help you?
+						</h3>
+					</div>
+
+					<div id="chatbot__input">
+						<input
+							type="text"
+							id="chatbot__input-text"
+							placeholder="Type your message here..."
+						/>
+						<button id="chatbot__input-button" class="chat-button">Send</button>
+						<button id="chatbot__input-clear" class="chat-button">Clear</button>
+					</div>
+				</div>
+
+				<div id="chatbot__output" class="chat-column">
+					<div class="chatbot__output-container">
+						<h3 id="chatbot__output-subhead">Answers are dislayed here.</h3>
+
+						<div id="chatbot__output-message">
+							<p class="output-text">Ask me something!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
