@@ -36,21 +36,20 @@ function startSite() {
 		inputField.removeEventListener("keyup", handleKeyPress);
 	});
 
-	// The getInputText function to be called when the return key is pressed
-	function getInputText() {
-		// Access the input field value here
-		const inputText = inputField.value;
-		// Do something with the input text
-		console.log("Input text:", inputText);
-	}
-
 	//get input text
 	function getInputText() {
-		inputText = document
+		// Access the input field value here
+		const inputText = document
 			.querySelector("#chatbot__input-text")
 			.value.toLowerCase();
-		console.log(inputText);
 
+		//clear output container
+		clearInputText();
+
+		// Log the input text
+		console.log("Input text:", inputText);
+
+		// Evaluate the input text
 		evaluateInputText(inputText);
 	}
 
@@ -79,7 +78,13 @@ function startSite() {
 				"Seems like you may be looking for information on safety and side effects. You can view more on safety here: [link]",
 		},
 		{
-			keywords: ["dosing"],
+			keywords: [
+				"dosing",
+				"dosage",
+				"how much should I take",
+				"how many pills is enough",
+				"dosing information",
+			],
 			response:
 				"You mentioned dosing. If that's what you're looking for, you can view more on dosing here: [link]",
 		},
@@ -128,6 +133,8 @@ function startSite() {
 				data.keywords.includes(matchedKeyword)
 			);
 			if (responseData) {
+				//clear output container
+				outputText.innerHTML = "";
 				const fullResponse = responseData.response + lorumText;
 				return fullResponse;
 			}
@@ -135,29 +142,6 @@ function startSite() {
 
 		return "Sorry, I don't have that information yet";
 	}
-
-	/* function generateResponse(inputText) {
-		const doc = nlp(inputText.toLowerCase());
-
-		for (let data of responsesData) {
-			for (let keyword of data.keywords) {
-				// Ensure keyword is a string
-				keyword = String(keyword);
-
-				// Use a regular expression for flexible matching
-				const regex = new RegExp("\\b" + keyword + "\\b", "i");
-
-				// Check if the keyword is in the tokens (using Compromise)
-				const isMatch = doc.match(regex).found;
-
-				// If there's a match, return the response
-				if (isMatch) {
-					return data.response;
-				}
-			}
-		}
-		return "Sorry, I don't have that information yet";
-	} */
 
 	// Additional entries for Condition X
 	responsesData.push(
@@ -197,6 +181,17 @@ function startSite() {
 			keywords: ["treatment for condition x", "how to treat condition x"],
 			response:
 				"Treatment options for Condition X include ... [link to more information]",
+		},
+		//Efficacy
+		{
+			keywords: [
+				"efficacy of brand Y",
+				"how effective is brand Y",
+				"brand Y efficacy",
+				"efficacy",
+			],
+			response:
+				"Brand Y has been found to be 96% effective in treating Condition X. See condition x results in XXX study ... [link to more information]",
 		},
 		// Medications
 		{
@@ -359,6 +354,29 @@ function startSite() {
 			keywords: ["nutrition for condition x", "dietary advice"],
 			response:
 				"Dietary advice and nutrition information for managing Condition X ... [link to more information]",
+		},
+		// MOA
+		{
+			keywords: [
+				"moa",
+				"mecanism of action",
+				"how does it work",
+				"how does it work?",
+				"molecular structure",
+			],
+			response:
+				"Brand Y activates the protien delivery motorduct in the gland spatula of a patient's nordomis ... [link to more information]",
+		},
+		// MOD
+		{
+			keywords: [
+				"mod",
+				"mecanism of disease",
+				"condition x affects",
+				"condition x affects",
+			],
+			response:
+				"Condition X is a bacterial bondel that inhibits protien delivery to a patient's motorduct ... [link to more information]",
 		}
 		// ... add more entries ...
 	);
