@@ -14,6 +14,7 @@ function startSite() {
 	//get the input text
 	let inputText;
 	let outputText = document.querySelector("#chatbot__output-message p");
+	const lorumText = `<br/><p class="output-text">Tempus imperdiet nulla malesuada pellentesque. Et tortor consequat id porta nibh venenatis. Pharetra et ultrices neque ornare. In vitae turpis massa sed. Eget dolor morbi non arcu risus quis varius quam quisque. Ut etiam sit amet nisl purus in. Velit egestas dui id ornare arcu odio ut sem. Non enim praesent elementum facilisis leo vel fringilla est ullamcorper. Tortor dignissim convallis aenean et tortor at. Tellus pellentesque eu tincidunt tortor aliquam nulla. Ut porttitor leo a diam sollicitudin tempor id eu nisl. <br/><br/> Pharetra vel turpis nunc eget lorem. Purus sit amet luctus venenatis lectus magna. Rhoncus dolor purus non enim. A scelerisque purus semper eget duis at tellus at urna. Hendrerit dolor magna eget est lorem ipsum dolor sit. Maecenas pharetra convallis posuere morbi leo. In fermentum et sollicitudin ac orci phasellus. Magna fringilla urna porttitor rhoncus dolor purus non. Tristique et egestas quis ipsum. Id diam vel quam elementum pulvinar etiam non. Arcu felis bibendum ut tristique et egestas quis ipsum. Leo in vitae turpis massa sed elementum tempus egestas sed. Est sit amet facilisis magna etiam tempor orci eu.</p>`;
 
 	//add event listener to chat buttons
 	inputButton.addEventListener("click", getInputText);
@@ -68,7 +69,12 @@ function startSite() {
 			response: "Hello, how are you today?",
 		},
 		{
-			keywords: ["safety", "side effects"],
+			keywords: [
+				"safety",
+				"side effects",
+				"safety information",
+				"information on safety",
+			],
 			response:
 				"Seems like you may be looking for information on safety and side effects. You can view more on safety here: [link]",
 		},
@@ -83,8 +89,16 @@ function startSite() {
 	// Function to evaluate input text
 	function evaluateInputText(inputText) {
 		const outputText = generateResponse(inputText);
+		const outputDisplay = document.querySelector("#chatbot__output-message p");
 		// Display outputText to the user
-		document.querySelector("#chatbot__output-message p").innerHTML = outputText;
+		gsap.to(outputDisplay, {
+			duration: 3,
+			text: {
+				value: outputText,
+				delimiter: " ",
+			},
+			ease: "none",
+		});
 	}
 
 	// Function to generate response based on input text
@@ -114,7 +128,8 @@ function startSite() {
 				data.keywords.includes(matchedKeyword)
 			);
 			if (responseData) {
-				return responseData.response;
+				const fullResponse = responseData.response + lorumText;
+				return fullResponse;
 			}
 		}
 
@@ -244,7 +259,11 @@ function startSite() {
 		},
 		// Corporate Information
 		{
-			keywords: ["company history", "pharmaceutical company products"],
+			keywords: [
+				"company history",
+				"pharmaceutical company products",
+				"corporate information",
+			],
 			response:
 				"Learn about the history and products of our pharmaceutical company ... [link to more information]",
 		},
