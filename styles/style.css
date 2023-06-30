@@ -25,6 +25,16 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 1.5rem 0;
+    color: #212529;
+    text-align: center;
+}
+
 h3 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
