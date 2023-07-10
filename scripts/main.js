@@ -84,6 +84,10 @@ function startSite() {
 				"how much should I take",
 				"how many pills is enough",
 				"dosing information",
+				"dosed",
+				"dose",
+				"how is brand y dosed",
+				"how do you dose brand y",
 			],
 			response:
 				"You mentioned dosing. If that's what you're looking for, you can view more on dosing here: [link]",
@@ -189,6 +193,9 @@ function startSite() {
 				"how effective is brand Y",
 				"brand Y efficacy",
 				"efficacy",
+				"how effective is brand Y in treating condition x",
+				"how good is brand Y",
+				"is brand y any good",
 			],
 			response:
 				"Brand Y has been found to be 96% effective in treating Condition X. See condition x results in XXX study ... [link to more information]",
@@ -237,6 +244,9 @@ function startSite() {
 				"cost of drug",
 				"cost of medication",
 				"access",
+				"cost of brand y",
+				"insurance coverage for brand y",
+				"can't afford brand y",
 			],
 			response:
 				"Information on insurance coverage and costs associated with Condition X treatment ... [link to more information]",
