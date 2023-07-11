@@ -1,4 +1,4 @@
-//wait until document is loaded to run, vanilla javascript
+//wait until document is loaded to run script
 document.addEventListener("DOMContentLoaded", startSite());
 
 //startSite function
