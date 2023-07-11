@@ -64,9 +64,14 @@ function startSite() {
 	// Data structure for keywords and responses
 	const responsesData = [
 		{
-			keywords: ["hello", "\\bhi\\b"],
+			keywords: [
+				"hey, how are you?",
+				"how you doing?",
+				"hello",
+				"hey there",
+				"\\bhi\\b",
+			],
 			response: "Hello, how are you today?",
-			action: showAvatar(hello),
 		},
 		{
 			keywords: [
