@@ -66,6 +66,7 @@ function startSite() {
 		{
 			keywords: ["hello", "\\bhi\\b"],
 			response: "Hello, how are you today?",
+			action: showAvatar(hello),
 		},
 		{
 			keywords: [
@@ -153,7 +154,7 @@ function startSite() {
 		{
 			keywords: ["what is condition x", "about condition x"],
 			response:
-				"Condition X is a medical condition characterized by ... [link to more information]",
+				"Condition X is a medical condition characterized by inflammation of the glotterous mengentinorial glands... [link to more information]",
 		},
 		// Brand Information
 		{
@@ -172,19 +173,19 @@ function startSite() {
 		{
 			keywords: ["symptoms of condition x", "signs of condition x"],
 			response:
-				"Common symptoms of Condition X include ... [link to more information]",
+				"Common symptoms of Condition X include swollen pictorious molenite dry dipthongian membranes... [link to more information]",
 		},
 		// Diagnosis
 		{
 			keywords: ["diagnose condition x", "condition x diagnosis"],
 			response:
-				"Condition X is typically diagnosed through ... [link to more information]",
+				"Condition X is typically diagnosed with a series of urine tests over the course of six months... [link to more information]",
 		},
 		// Treatment
 		{
 			keywords: ["treatment for condition x", "how to treat condition x"],
 			response:
-				"Treatment options for Condition X include ... [link to more information]",
+				"Treatment options for Condition X include leaching and tear collection with subcutanious reintroduction. But recently a new treatment called Brand Y is giving hope to exasperated patients... [link to more information]",
 		},
 		//Efficacy
 		{
@@ -198,25 +199,25 @@ function startSite() {
 				"is brand y any good",
 			],
 			response:
-				"Brand Y has been found to be 96% effective in treating Condition X. See condition x results in XXX study ... [link to more information]",
+				"Brand Y has been found to be 96% effective in treating Condition X. See condition x results in the Mandalorian study... [link to more information]",
 		},
 		// Medications
 		{
 			keywords: ["medications for condition x", "drugs for condition x"],
 			response:
-				"Common medications for treating Condition X include ... [link to more information]",
+				"Common medications for treating Condition X include baby aspirin and deep radiation. There's also a new medication called Brand Y that has proven far more efficacious... [link to more information]",
 		},
 		// Side Effects
 		{
 			keywords: ["side effects of drug", "adverse effects"],
 			response:
-				"Some common side effects of this drug include ... [link to more information]",
+				"Some common side effects of this drug include sweltering and bandaliface orifice drainage. See the full list here... [link to more information]",
 		},
 		// Prevention
 		{
 			keywords: ["prevent condition x", "avoid condition x"],
 			response:
-				"Preventative measures for Condition X include ... [link to more information]",
+				"Preventative measures for Condition X can be found here... [link to more information]",
 		},
 		// Research and Development
 		{
