@@ -28,19 +28,38 @@
 		<script src="scripts/main.js" defer></script>
 
 		<section id="header">
-			<h1 id="main__title">ChatBot Prototype V-1</h1>
+			<h1 id="main__title">ChatBot Prototype V-2</h1>
 			<h2 id="main__subhead">Information on Condition X and Brand Y</h2>
 		</section>
 
 		<section id="chatbot">
 			<div id="chatbot__container">
-				<div id="chatbot__messages" class="chat-column">
-					<div class="chatbot__message">
-						<h3 id="chatbot__message-subhead">
-							Hello, I'm a chatbot. How can I help you?
-						</h3>
+
+				<!-- response container -->
+				<div id="response__container">
+					<!-- avatar output -->
+					<div id="avatar__container" class="chat-column">
+						<div class="chatbot__output-container">
+							<h3 id="avatar__subhead">Avatar container</h3>
+							<div id="avatar__vid__container" class="output-style no-overflow-vid">
+								<video autoplay muted loop width="100%" id="avatar__video" src="vid/rest_loop.mp4" class="avatar-vid" type="video/mp4">
+							</div>
+						</div>
 					</div>
 
+					<!-- text output -->
+					<div id="chatbot__output" class="chat-column">
+						<div class="chatbot__output-container">
+							<h3 id="chatbot__output-subhead">Answers are dislayed here.</h3>
+							<div id="chatbot__output-message" class="output-style overflow-y-set">
+								<p class="output-text">Ask me something!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- input container -->
+				<div id="chatbot__input__container" class="chat-column">
 					<div id="chatbot__input">
 						<input
 							type="text"
@@ -49,16 +68,6 @@
 						/>
 						<button id="chatbot__input-button" class="chat-button">Send</button>
 						<button id="chatbot__input-clear" class="chat-button">Clear</button>
-					</div>
-				</div>
-
-				<div id="chatbot__output" class="chat-column">
-					<div class="chatbot__output-container">
-						<h3 id="chatbot__output-subhead">Answers are dislayed here.</h3>
-
-						<div id="chatbot__output-message">
-							<p class="output-text">Ask me something!</p>
-						</div>
 					</div>
 				</div>
 			</div>
